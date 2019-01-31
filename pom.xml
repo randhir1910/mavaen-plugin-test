@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.knoldus</groupId>
+    <artifactId>PlugInTest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>sample.plugin</groupId>
+                <artifactId>CodeSquad-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                        <organisationName>TestOrg5</organisationName>
+                        <projectName>Testproj3</projectName>
+                        <moduleName>TestMod1</moduleName>
+                        <registrationKey>2b19df24-f1aa-4a43-8027-8b1df602543a</registrationKey>
+                        <files>
+                            <param>/home/knoldus/Downloads/scoverage.xml</param>
+                            <param>/home/knoldus/Downloads/scapegoat.xml</param>
+                        </files>
+                        </configuration>
+                        <id>module_1</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>ReportUpload</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <configuration>
+                            <organisationName>TestOrg5</organisationName>
+                            <projectName>Testproj3</projectName>
+                            <moduleName>TestMod2</moduleName>
+                            <registrationKey>2b19df24-f1aa-4a43-8027-8b1df602543a</registrationKey>
+                            <files>
+                                <param>/home/knoldus/Downloads/scoverage.xml</param>
+                                <param>/home/knoldus/Downloads/scapegoat.xml</param>
+                            </files>
+                        </configuration>
+                        <id>module_2</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>ReportUpload</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
